@@ -13,14 +13,15 @@ header {
 	background-size: cover;
 	text-align: center;
 	margin-top: 0;
+
 }
 
 h1 {
 	font-family: 'Domine', serif;
 	font-weight: bold;
 	font-size: 65px;
-	height: 100%;
-	margin: 0;
+	height: 70px;
+	margin: 30px 0;
 	text-align: center;
 }
 
@@ -32,24 +33,31 @@ main {
 	width: 80%;
 }
 
-.text {
+a.text {
 	text-decoration: none;
 	color: black;
 	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	
 }
 .text:hover {
 	background-color: #D8D9D7;
+	color: white;
 	
 }
-
+p {
+	margin-top: 0;
+}
 button, .text, p {
 	width: 100%;
 	font-family: 'Assistant', sans-serif;
 }
 
 button {
-	font-size: 20px;
+	font-size: 23px;
 	border-bottom: 2px solid gray;
+	outline: none;
 }
 
 footer {

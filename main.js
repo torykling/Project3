@@ -11,10 +11,13 @@ let main = document.querySelector("main");
  		for (let i = 0; i < res.articles.length; i++) {
  			if (res.articles[i].description) {
  				let button = main.appendChild(document.createElement("button"))
+ 				let arrow = main.appendChild(document.createElement("i"))
+ 				arrow.classList.add("fa-chevron-circle-down")
+ 				arrow.classList.add("fas")
  				let description = main.appendChild(document.createElement("a"))
  				let author = main.appendChild(document.createElement("p"))
  				button.innerText = res.articles[i].title
- 				description.innerText = res.articles[i].description
+ 				description.innerText = res.articles[i].content
  				description.setAttribute("href", res.articles[i].url)
  				description.setAttribute("target", "_blank")
  				description.classList.add("text")
@@ -26,12 +29,10 @@ let main = document.querySelector("main");
 
  			}
  		}
-
-
 		let buttons = document.querySelectorAll("button");
 		let descriptions = document.querySelectorAll("a.text");
 		let authors = document.querySelectorAll("p");
-		console.log(descriptions)
+		
 
 		for (let i = 0 ; i < buttons.length; i++) {
 			buttons[i].addEventListener("click", function(e) {
