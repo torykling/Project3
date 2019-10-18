@@ -22,6 +22,9 @@ let button5 = document.querySelector("#button5");
 let fifthDropDown = document.querySelector(".fifthDropDown");
 let author5 = document.querySelector(".author5");
 
+// let buttons = document.querySelectorAll("button"); 
+// let dropDowns = document.querySelectorAll(".text");
+// let authors = document.querySelectorAll(".authors");
 
  fetch(url) 
  	.then(res => res.json())
@@ -29,34 +32,45 @@ let author5 = document.querySelector(".author5");
  		console.log("Success!", res.articles)
  		button1.innerText = res.articles[0].title
  		firstDropDown.innerText = res.articles[0].description 
- 		author1.innerText = "authored by " + res.articles[0].author
  		firstDropDown.setAttribute("href", res.articles[0].url)
+ 		if (res.articles[0].author !== null) {
+ 			author1.innerText = "authored by " + res.articles[0].author
+ 		}
 
  		button2.innerText = res.articles[1].title
  		secondDropDown.innerText = res.articles[1].description
- 		author2.innerText = "authored by " + res.articles[1].author
  		secondDropDown.setAttribute("href", res.articles[1].url)
+ 		if (res.articles[1].author !== null) {
+ 			author2.innerText = "authored by " + res.articles[1].author
+ 		}
 
  		button3.innerText = res.articles[2].title
  		thirdDropDown.innerText = res.articles[2].description
- 		author3.innerText = "authored by " + res.articles[2].author
  		thirdDropDown.setAttribute("href", res.articles[2].url)
+ 		if (res.articles[2].author !== null) {
+ 			author3.innerText = "authored by " + res.articles[2].author
+ 		}
 
  		button4.innerText = res.articles[3].title
  		fourthDropDown.innerText = res.articles[3].description
- 		author4.innerText = "authored by " + res.articles[3].author
  		fourthDropDown.setAttribute("href", res.articles[3].url)
+ 		if (res.articles[3].author !== null) {
+ 			author3.innerText = "authored by " + res.articles[3].author
+ 		}
 
  		button5.innerText = res.articles[4].title
  		fifthDropDown.innerText = res.articles[4].description
- 		author5.innerText = "authored by " + res.articles[4].author
  		fifthDropDown.setAttribute("href", res.articles[4].url)
+ 		if (res.articles[4].author !== null) {
+ 			author5.innerText = "authored by " + res.articles[4].author
+ 		}
  	})
  	.catch(err => {
  		console.log("Something went wrong", err)
  	})
 
  // event listeners to allow the accordion drop down
+
  button1.addEventListener("click", function(e) {
  	e.preventDefault();
  	firstDropDown.classList.toggle("hidden")
