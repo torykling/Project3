@@ -33,35 +33,35 @@ let author5 = document.querySelector(".author5");
  		button1.innerText = res.articles[0].title
  		firstDropDown.innerText = res.articles[0].description 
  		firstDropDown.setAttribute("href", res.articles[0].url)
- 		if (res.articles[0].author !== null) {
+ 		if (res.articles[0].author) {
  			author1.innerText = "authored by " + res.articles[0].author
  		}
 
  		button2.innerText = res.articles[1].title
  		secondDropDown.innerText = res.articles[1].description
  		secondDropDown.setAttribute("href", res.articles[1].url)
- 		if (res.articles[1].author !== null) {
+ 		if (res.articles[1].author) {
  			author2.innerText = "authored by " + res.articles[1].author
  		}
 
  		button3.innerText = res.articles[2].title
  		thirdDropDown.innerText = res.articles[2].description
  		thirdDropDown.setAttribute("href", res.articles[2].url)
- 		if (res.articles[2].author !== null) {
+ 		if (res.articles[2].author) {
  			author3.innerText = "authored by " + res.articles[2].author
  		}
 
  		button4.innerText = res.articles[3].title
  		fourthDropDown.innerText = res.articles[3].description
  		fourthDropDown.setAttribute("href", res.articles[3].url)
- 		if (res.articles[3].author !== null) {
+ 		if (res.articles[3].author) {
  			author3.innerText = "authored by " + res.articles[3].author
  		}
 
  		button5.innerText = res.articles[4].title
  		fifthDropDown.innerText = res.articles[4].description
  		fifthDropDown.setAttribute("href", res.articles[4].url)
- 		if (res.articles[4].author !== null) {
+ 		if (res.articles[4].author) {
  			author5.innerText = "authored by " + res.articles[4].author
  		}
  	})
