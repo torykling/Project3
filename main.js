@@ -11,9 +11,6 @@ let main = document.querySelector("main");
  		for (let i = 0; i < res.articles.length; i++) {
  			if (res.articles[i].description) {
  				let button = main.appendChild(document.createElement("button"))
- 				let arrow = main.appendChild(document.createElement("i"))
- 				arrow.classList.add("fa-chevron-circle-down")
- 				arrow.classList.add("fas")
  				let description = main.appendChild(document.createElement("a"))
  				let author = main.appendChild(document.createElement("p"))
  				button.innerText = res.articles[i].title
