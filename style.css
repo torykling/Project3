@@ -27,9 +27,9 @@ h1 {
 main {
 	display: flex;
 	flex-direction: column;
-	margin: 10px auto 0 auto;
+	margin: 10px auto 100px auto;
 	height: 70%;
-	width: 90%;
+	width: 80%;
 }
 
 .text {
@@ -42,13 +42,14 @@ main {
 	
 }
 
-button, .text, .authors {
+button, .text, p {
 	width: 100%;
 	font-family: 'Assistant', sans-serif;
 }
 
 button {
-	font-size: 20px;	
+	font-size: 20px;
+	border-bottom: 2px solid gray;
 }
 
 footer {
@@ -76,13 +77,6 @@ footer:hover {
 	display: none;
 }
 
-.img1 {
-	width: 40%;
-}
-.container {
-	display: flex;
-
-}
 
 @media screen and (max-width: 555px) {
 	.small {

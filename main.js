@@ -16,6 +16,7 @@ let main = document.querySelector("main");
  				button.innerText = res.articles[i].title
  				description.innerText = res.articles[i].description
  				description.setAttribute("href", res.articles[i].url)
+ 				description.setAttribute("target", "_blank")
  				description.classList.add("text")
  				if (res.articles[i].author) {
  					author.innerText = "authored by " + res.articles[i].author
