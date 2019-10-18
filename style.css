@@ -16,7 +16,6 @@ h1 {
 	font-family: 'Domine', serif;
 	font-weight: bold;
 	font-size: 65px;
-	/*margin: 10%;*/
 }
 
 main {
@@ -24,13 +23,13 @@ main {
 	flex-direction: column;
 	margin-top: 40%;
 	height: 70%;
-	z-index: 2;
 }
 
 a {
 	text-decoration: none;
 	color: black;
 	font-size: 20px;
+	/*z-index: 3;*/
 }
 a:hover {
 	background-color: #F3F3F3;
@@ -53,6 +52,7 @@ footer {
 	position: fixed;
 	bottom: 0;
 	text-align: center;
+	/*z-index: 1;*/
 }
 
 footer:hover {
@@ -71,4 +71,12 @@ footer:hover {
 }
 
 
-
+@media screen and (max-width: 555px) {
+	.small {
+		height: 5%;
+		font-size: 15px;
+	}
+	.smallh1 {
+		font-size: 45px;
+	}
+}
