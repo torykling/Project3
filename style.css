@@ -19,7 +19,7 @@ header {
 h1 {
 	font-family: 'Domine', serif;
 	font-weight: bold;
-	font-size: 65px;
+	font-size: 80px;
 	height: 70px;
 	margin: 30px 0;
 	text-align: center;
@@ -91,6 +91,11 @@ footer:hover {
 		height: 5%;
 		font-size: 15px;
 	}
+	.smallh1 {
+		font-size: 65px;
+	}
+}
+@media screen and (max-width: 300px) {
 	.smallh1 {
 		font-size: 45px;
 	}
