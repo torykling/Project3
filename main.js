@@ -1,7 +1,8 @@
  // api key c38e7bc912154c2fbac55e52653a38fc
 
 const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=c38e7bc912154c2fbac55e52653a38fc"
-let section = document.querySelector("section");
+let topStories = document.querySelector(".topStories");
+let searchStories = document.querySelector(".searchStories");
 // this builds the search feature
 let input = document.querySelector(".input");
 let form = document.querySelector("form");
@@ -19,9 +20,9 @@ form.addEventListener("submit", function(evt) {
     			console.log("success2", res)
     			for(let i = 0; i < 10; i++) {
     				if (res.articles[i].content) {
-    					let button2 = section.appendChild(document.createElement("button"))
+    					let button2 = searchStories.appendChild(document.createElement("button"))
     					button2.innerText = res.articles[i].title
-    					let description2 = section.appendChild(document.createElement("a"))
+    					let description2 = searchStories.appendChild(document.createElement("a"))
     					description2.innerText = res.articles[i].content
     					description2.classList.add("hidden")
     					description2.classList.add("text")
@@ -55,9 +56,9 @@ form.addEventListener("submit", function(evt) {
  		console.log("Success!", res.articles)
  		for (let i = 0; i < res.articles.length; i++) {
  			if (res.articles[i].content) {
- 				let button = section.appendChild(document.createElement("button"))
- 				let description = section.appendChild(document.createElement("a"))
- 				let author = section.appendChild(document.createElement("p"))
+ 				let button = topStories.appendChild(document.createElement("button"))
+ 				let description = topStories.appendChild(document.createElement("a"))
+ 				let author = topStories.appendChild(document.createElement("p"))
  				button.innerText = res.articles[i].title
  				description.innerText = res.articles[i].content
  				description.setAttribute("href", res.articles[i].url)

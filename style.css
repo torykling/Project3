@@ -36,6 +36,10 @@ section {
 	display: flex;
 	flex-direction: column;
 }
+.stories {
+	display:flex;
+	flex-direction: column;
+}
 
 a.text {
 	text-decoration: none;
