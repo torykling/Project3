@@ -12,6 +12,8 @@
 
 ## **Challenges**
 >This API had some array items with missing data. I had to build a for loop to prevent a title from displaying if its description was an empty string and to prevent the author from displaying if its author was null. 
+>I added a search feature to allow the user to search for articles by category. Sometimes the search returns articles that are not particularly relevant to the search. Also, the formatting of content from the API is inconsitent from one article to the next. I'm not sure if the API allows for a way to address these issues. 
+
 
 ## **Next Steps**
->I'd like to add a search function that would allow the user to search for top stories by category. 
+>I'd like to learn more about UX design and ways to add more style to this site. 
