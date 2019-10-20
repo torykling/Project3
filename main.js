@@ -9,7 +9,7 @@ let main = document.querySelector("main");
  	.then(res => {
  		console.log("Success!", res.articles)
  		for (let i = 0; i < res.articles.length; i++) {
- 			if (res.articles[i].description) {
+ 			if (res.articles[i].content) {
  				let button = main.appendChild(document.createElement("button"))
  				let description = main.appendChild(document.createElement("a"))
  				let author = main.appendChild(document.createElement("p"))
