@@ -9,6 +9,7 @@ let form = document.querySelector("form");
 
 form.addEventListener("submit", function(evt) {
     evt.preventDefault();
+    let feedback = document.querySelector(".searchFeedback");
     	console.log(input.value);
     	fetch('https://newsapi.org/v2/everything?' +
          	`q=${input.value}&` +
@@ -18,6 +19,7 @@ form.addEventListener("submit", function(evt) {
     		.then(res => res.json())
     		.then(res => {
     			console.log("success2", res)
+    			feedback.innerText = ""
     			for(let i = 0; i < 10; i++) {
     				if (res.articles[i].content) {
     					let button2 = searchStories.appendChild(document.createElement("button"))
@@ -45,7 +47,10 @@ form.addEventListener("submit", function(evt) {
 					})
 				}
     		})
-    		.catch(err => console.log("uh oh 2", err))
+    		.catch(err => {
+    			console.log("uh oh 2", err)
+    			feedback.innerText = "Invalid search"
+    		})
 })
 
 
