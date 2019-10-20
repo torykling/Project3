@@ -27,10 +27,14 @@ h1 {
 
 main {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	margin: 10px auto 100px auto;
 	height: 70%;
 	width: 80%;
+}
+section {
+	display: flex;
+	flex-direction: column;
 }
 
 a.text {
@@ -84,7 +88,9 @@ footer:hover {
 .hidden {
 	display: none;
 }
-
+aside {
+	background-color: #D8D9D7;
+}
 
 @media screen and (max-width: 555px) {
 	.small {
@@ -93,6 +99,9 @@ footer:hover {
 	}
 	.smallh1 {
 		font-size: 65px;
+	}
+	main {
+		flex-direction: column-reverse;
 	}
 }
 @media screen and (max-width: 300px) {
