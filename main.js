@@ -20,6 +20,7 @@ form.addEventListener("submit", function(evt) {
     		.then(res => {
     			console.log("success2", res)
     			feedback.innerText = ""
+    			searchStories.innerHTML = ""
     			for(let i = 0; i < 10; i++) {
     				if (res.articles[i].content) {
     					let button2 = searchStories.appendChild(document.createElement("button"))
