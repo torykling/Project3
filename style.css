@@ -95,6 +95,12 @@ footer:hover {
 aside {
 	background-color: #D8D9D7;
 }
+.wide {
+	width: 100%;
+}
+.narrow {
+	width: 30%;
+}
 
 @media screen and (max-width: 555px) {
 	.small {
@@ -103,6 +109,9 @@ aside {
 	}
 	.smallh1 {
 		font-size: 65px;
+	}
+	.narrow {
+		width: 100%;
 	}
 	main {
 		flex-direction: column-reverse;
