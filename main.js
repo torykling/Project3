@@ -16,7 +16,7 @@ form.addEventListener("submit", function(evt) {
   fetch(
     "https://newsapi.org/v2/everything?" +
       `q=${input.value}&` +
-      "from=2019-12-20&" +
+      //   "from=2019-12-20&" +
       "sortBy=popularity&" +
       "apiKey=c38e7bc912154c2fbac55e52653a38fc"
   )
