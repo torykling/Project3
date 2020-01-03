@@ -113,6 +113,7 @@ function getTopStories() {
 
 getTopStories();
 
+// allow user to go back to top stories after search
 home.addEventListener("click", function(e) {
   e.preventDefault();
   console.log("clicked");
