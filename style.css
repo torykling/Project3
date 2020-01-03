@@ -120,6 +120,7 @@ aside {
   display: flex;
 }
 #home {
+  display: block;
   border: none;
   background-color: rgba(1, 1, 1, 0);
   font-family: "Domine", serif;
