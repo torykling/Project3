@@ -105,6 +105,9 @@ aside {
   margin: 0;
   border: 1px solid lightgray;
   border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .searchButton:hover {
   background-color: #d8d9d7;
