@@ -23,7 +23,7 @@ main {
   flex-direction: row;
   margin: 10px auto 100px auto;
   height: 70%;
-  width: 80%;
+  width: 90%;
 }
 section {
   display: flex;
