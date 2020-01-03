@@ -18,15 +18,6 @@ header {
   margin-top: 0;
 }
 
-h1 {
-  font-family: "Domine", serif;
-  font-weight: bold;
-  font-size: 80px;
-  height: 70px;
-  margin: 30px 0;
-  text-align: center;
-}
-
 main {
   display: flex;
   flex-direction: row;
@@ -126,6 +117,12 @@ aside {
 #home {
   border: none;
   background-color: rgba(1, 1, 1, 0);
+  font-family: "Domine", serif;
+  font-weight: bold;
+  font-size: 80px;
+  height: 70px;
+  margin: 30px 0;
+  text-align: center;
 }
 #home:hover {
   color: white;
@@ -135,7 +132,7 @@ aside {
     height: 5%;
     font-size: 15px;
   }
-  .title {
+  #home {
     font-size: 65px;
   }
   .narrow {
@@ -151,8 +148,8 @@ aside {
     width: 100%;
   }
 }
-@media only screen and (max-width: 300px) {
-  .title {
-    font-size: 45px;
+@media only screen and (max-width: 350px) {
+  #home {
+    font-size: 55px;
   }
 }
