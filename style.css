@@ -130,8 +130,10 @@ aside {
 #home:hover {
   color: white;
 }
+
 @media only screen and (max-width: 700px) {
-  .small {
+  footer,
+  .newsAPI {
     height: 5%;
     font-size: 15px;
   }
