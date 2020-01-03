@@ -41,7 +41,6 @@ form.addEventListener("submit", function(evt) {
           description2.classList.add("text");
           description2.setAttribute("href", res.articles[i].url);
           description2.setAttribute("target", "_blank");
-          aside.classList.add("narrow");
         }
       }
       let buttons = document.querySelectorAll("button:not(#home)");
@@ -62,7 +61,6 @@ form.addEventListener("submit", function(evt) {
     .catch(err => {
       console.log("uh oh 2", err);
       feedback.innerText = "Invalid search";
-      aside.classList.add("wide");
     });
 });
 

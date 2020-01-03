@@ -117,12 +117,7 @@ aside {
   background-color: #d8d9d7;
   color: white;
 }
-.wide {
-  width: 100%;
-}
-.narrow {
-  width: 30%;
-}
+
 #form {
   width: 100%;
   padding: 0;
