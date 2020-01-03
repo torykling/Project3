@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>UI Element</title>
-	<link href="https://fonts.googleapis.com/css?family=Assistant|Domine:700&display=swap" rel="stylesheet">
-	<i class="fas fa-chevron-circle-down"></i>
-	<i class="fas fa-chevron-circle-up"></i>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<h1 class="smallh1">Top News Stories</h1>
-	</header>
-	
-<main>
-	<div class="stories">
-		<section class="searchStories">
-		</section>
-		<section class="topStories">
-		</section>
-	</div>
-	<aside>
-		<form id="form">
-			<input type="text" class="input" placeholder="Category">
-			<input type="submit" value="Search">
-		</form>
-		<p class="searchFeedback"></p>
-	</aside>
-</main>
+  <head>
+    <title>UI Element</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Assistant|Domine:700&display=swap"
+      rel="stylesheet"
+    />
+    <i class="fas fa-chevron-circle-down"></i>
+    <i class="fas fa-chevron-circle-up"></i>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="home">
+        <h1 class="smallh1">Top News Stories</h1>
+      </button>
+    </header>
 
-	<footer class="small">
-		<a class="newsAPI small" target="_blank" href="https://newsapi.org/">powered by NewsAPI</a>
-	</footer>
-	
-<script type="text/javascript" src="main.js"></script>
-</body>
+    <main>
+      <div class="stories">
+        <section class="searchStories"></section>
+        <section class="topStories"></section>
+      </div>
+      <aside>
+        <form id="form">
+          <input type="text" class="input" placeholder="Category" />
+          <input type="submit" class="button" value="Search" />
+        </form>
+        <p class="searchFeedback"></p>
+      </aside>
+    </main>
+
+    <footer class="small">
+      <a class="newsAPI small" target="_blank" href="https://newsapi.org/"
+        >powered by NewsAPI</a
+      >
+    </footer>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>

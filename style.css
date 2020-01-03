@@ -1,124 +1,149 @@
+* {
+  box-sizing: border-box;
+}
 body {
-	margin: 0;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	align-items: space-between;
-	height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  height: 100%;
 }
 header {
-	background-image: url("headerPic.jpg");
-	width: 100%;
-	height: 200px;
-	background-size: cover;
-	text-align: center;
-	margin-top: 0;
-
+  background-image: url("headerPic.jpg");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  text-align: center;
+  margin-top: 0;
 }
 
 h1 {
-	font-family: 'Domine', serif;
-	font-weight: bold;
-	font-size: 80px;
-	height: 70px;
-	margin: 30px 0;
-	text-align: center;
+  font-family: "Domine", serif;
+  font-weight: bold;
+  font-size: 80px;
+  height: 70px;
+  margin: 30px 0;
+  text-align: center;
 }
 
 main {
-	display: flex;
-	flex-direction: row;
-	margin: 10px auto 100px auto;
-	height: 70%;
-	width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto 100px auto;
+  height: 70%;
+  width: 80%;
 }
 section {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .stories {
-	display:flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 a.text {
-	text-decoration: none;
-	color: black;
-	font-size: 20px;
-	padding-top: 20px;
-	padding-bottom: 15px;
-	
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 .text:hover {
-	background-color: #D8D9D7;
-	color: white;
-	
+  background-color: #d8d9d7;
+  color: white;
 }
 p {
-	margin-top: 0;
+  margin-top: 0;
 }
-button, .text, p {
-	width: 100%;
-	font-family: 'Assistant', sans-serif;
+button,
+.text,
+p {
+  width: 100%;
+  font-family: "Assistant", sans-serif;
 }
 
 button {
-	font-size: 23px;
-	border-bottom: 2px solid gray;
-	outline: none;
+  font-size: 23px;
+  border-bottom: 2px solid gray;
+  outline: none;
 }
-
+button:hover {
+  color: grey;
+}
 footer {
-	background-color: red;
-	width: 100%;
-	height: 8%;
-	position: fixed;
-	bottom: 0;
-	text-align: center;
+  background-color: red;
+  width: 100%;
+  height: 8%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
 }
 
 footer:hover {
-	background-color: #000045;
+  background-color: #000045;
 }
 
 .newsAPI {
-	color: white;
-	font-family: 'Domine', serif;
-	font-weight: bold;
-	font-size: 25px;
-	text-decoration: none;
+  color: white;
+  font-family: "Domine", serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 aside {
-	background-color: #D8D9D7;
+  background-color: #d8d9d7;
+  width: 20%;
+  padding: 0;
+}
+.input {
+  width: 60%;
+  margin: 0;
+}
+.button {
+  width: 30%;
+  margin: 0;
 }
 .wide {
-	width: 100%;
+  width: 100%;
 }
 .narrow {
-	width: 30%;
+  width: 30%;
 }
-
+#form {
+  width: 100%;
+  padding: 0;
+}
+#home {
+  border: none;
+  background-color: rgba(1, 1, 1, 0);
+}
+#home:hover {
+  color: white;
+}
 @media screen and (max-width: 555px) {
-	.small {
-		height: 5%;
-		font-size: 15px;
-	}
-	.smallh1 {
-		font-size: 65px;
-	}
-	.narrow {
-		width: 100%;
-	}
-	main {
-		flex-direction: column-reverse;
-	}
+  .small {
+    height: 5%;
+    font-size: 15px;
+  }
+  .smallh1 {
+    font-size: 65px;
+  }
+  .narrow {
+    width: 100%;
+  }
+  main {
+    flex-direction: column-reverse;
+  }
 }
 @media screen and (max-width: 300px) {
-	.smallh1 {
-		font-size: 45px;
-	}
+  .smallh1 {
+    font-size: 45px;
+  }
 }

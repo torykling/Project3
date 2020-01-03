@@ -9,6 +9,8 @@ let input = document.querySelector(".input");
 let form = document.querySelector("form");
 let aside = document.querySelector("aside");
 
+let home = document.getElementById("home");
+
 form.addEventListener("submit", function(evt) {
   evt.preventDefault();
   let feedback = document.querySelector(".searchFeedback");
@@ -16,7 +18,6 @@ form.addEventListener("submit", function(evt) {
   fetch(
     "https://newsapi.org/v2/everything?" +
       `q=${input.value}&` +
-      //   "from=2019-12-20&" +
       "sortBy=popularity&" +
       "apiKey=c38e7bc912154c2fbac55e52653a38fc"
   )
@@ -26,7 +27,7 @@ form.addEventListener("submit", function(evt) {
       feedback.innerText = "";
       searchStories.innerHTML = "";
       topStories.innerHTML = "";
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 20; i++) {
         if (res.articles[i].content) {
           let button2 = searchStories.appendChild(
             document.createElement("button")
@@ -43,7 +44,7 @@ form.addEventListener("submit", function(evt) {
           aside.classList.add("narrow");
         }
       }
-      let buttons = document.querySelectorAll("button");
+      let buttons = document.querySelectorAll("button:not(#home)");
       let descriptions = document.querySelectorAll("a.text");
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function(e) {
@@ -66,45 +67,59 @@ form.addEventListener("submit", function(evt) {
 });
 
 // This builds the main section with the default top stories
-fetch(url)
-  .then(res => res.json())
-  .then(res => {
-    console.log("Success!", res.articles);
-    for (let i = 0; i < res.articles.length; i++) {
-      if (res.articles[i].content) {
-        let button = topStories.appendChild(document.createElement("button"));
-        let description = topStories.appendChild(document.createElement("a"));
-        let author = topStories.appendChild(document.createElement("p"));
-        button.innerText = res.articles[i].title;
-        description.innerText = res.articles[i].content;
-        description.setAttribute("href", res.articles[i].url);
-        description.setAttribute("target", "_blank");
-        description.classList.add("text");
-        if (res.articles[i].author) {
-          author.innerText = "authored by " + res.articles[i].author;
-        }
-        description.classList.add("hidden");
-        author.classList.add("hidden");
-      }
-    }
-    let buttons = document.querySelectorAll("button");
-    let descriptions = document.querySelectorAll("a.text");
-    let authors = document.querySelectorAll("p");
 
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener("click", function(e) {
-        e.preventDefault();
-        descriptions[i].classList.toggle("hidden");
-        authors[i].classList.toggle("hidden");
-        for (let j = 0; j < buttons.length; j++) {
-          if (j != i) {
-            descriptions[j].classList.add("hidden");
-            authors[j].classList.add("hidden");
+function getTopStories() {
+  fetch(url)
+    .then(res => res.json())
+    .then(res => {
+      console.log("Success!", res.articles);
+      for (let i = 0; i < res.articles.length; i++) {
+        if (res.articles[i].content) {
+          let button = topStories.appendChild(document.createElement("button"));
+          let description = topStories.appendChild(document.createElement("a"));
+          let author = topStories.appendChild(document.createElement("p"));
+          button.innerText = res.articles[i].title;
+          description.innerText = res.articles[i].content;
+          description.setAttribute("href", res.articles[i].url);
+          description.setAttribute("target", "_blank");
+          description.classList.add("text");
+          if (res.articles[i].author) {
+            author.innerText = "authored by " + res.articles[i].author;
           }
+          description.classList.add("hidden");
+          author.classList.add("hidden");
         }
-      });
-    }
-  })
-  .catch(err => {
-    console.log("Something went wrong", err);
-  });
+      }
+      let buttons = document.querySelectorAll("button:not(#home)");
+      let descriptions = document.querySelectorAll("a.text");
+      let authors = document.querySelectorAll("p");
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(e) {
+          e.preventDefault();
+          descriptions[i].classList.toggle("hidden");
+          authors[i].classList.toggle("hidden");
+          for (let j = 0; j < buttons.length; j++) {
+            if (j != i) {
+              descriptions[j].classList.add("hidden");
+              authors[j].classList.add("hidden");
+            }
+          }
+        });
+      }
+    })
+    .catch(err => {
+      console.log("Something went wrong", err);
+    });
+}
+
+getTopStories();
+
+home.addEventListener("click", function(e) {
+  e.preventDefault();
+  console.log("clicked");
+  input.value = "";
+  searchStories.innerHTML = "";
+  topStories.innerHTML = "";
+  getTopStories();
+});
