@@ -144,6 +144,7 @@ aside {
   #home {
     font-size: 65px;
     height: 150px;
+    width: 375px;
   }
   .narrow {
     width: 100%;
@@ -161,5 +162,6 @@ aside {
 @media only screen and (max-width: 350px) {
   #home {
     font-size: 55px;
+    height: 200px;
   }
 }
